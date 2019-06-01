@@ -26,10 +26,19 @@ export default class Contaminated extends React.Component {
                 source = {require('../assets/contaminated.png')}
             />
             {this.state.fontLoaded ? (
-            <Text style={styles.statsText}>
-                One reason is the system that allows private haulers to label bins “contaminated” and send them to landfills, if improper materials are found. 
-            </Text>
-        ) : null}
+                <Text style = {styles.main}>
+                     “Since 2014, private and municipal waste hauling crews labeled at least 577,886 recycling bins as ‘grossly contaminated’ with improper items” 
+                </Text>
+            ): null}
+            {this.state.fontLoaded ? (
+                <Text style={styles.statsText}>
+                    One reason is the system that allows private haulers to label bins “contaminated” and send them to landfills, if improper materials are found. {"\n\n"}Under city rules, one plastic bag or food item improperly placed in a recycling bin could mean the whole bin is labeled “grossly contaminated.” 
+                </Text>
+            ) : null}
+            <Button>
+                title = "Continue"
+                onPress={() => this.props.navigation.navigate('Apartments')}
+            </Button>
 
         </View>
     );
@@ -50,14 +59,14 @@ const styles = StyleSheet.create({
     fontFamily: 'Karla',
     marginLeft: 20,
     marginRight: 20,
-    marginTop: 20
+    marginTop: 35
   },
-  expand: {
+  main: {
     color: '#fff',
-    fontSize: 14,
-    fontFamily: 'Karla',
-    marginTop: 30,
-    marginLeft: 10
+    fontSize: 18,
+    fontFamily: 'Space-Mono',
+    marginRight: 70,
+    marginLeft: 15
   },
   redirect: {
     width: 90,
