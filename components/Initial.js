@@ -3,38 +3,38 @@ import { StyleSheet, ImageBackground, Image, View, Text, Button } from 'react-na
 import { Font } from 'expo';
 
 export default class Initial extends React.Component {
-    static navigationOptions = {header: null} 
+  static navigationOptions = {header: null} 
 
-    componentDidMount() {
-        Font.loadAsync({'pt': require('../assets/fonts/pt.ttf')});
-    }
+  componentDidMount() {
+    Font.loadAsync({'pt': require('../assets/fonts/pt.ttf')});
+  }
 
-    state = { fontLoaded: false};
+  state = { fontLoaded: false};
     
-    async componentDidMount() {
-        await Font.loadAsync({'pt': require('../assets/fonts/pt.ttf'),});
-        this.setState({fontLoaded: true});
-    }
+  async componentDidMount() {
+    await Font.loadAsync({'pt': require('../assets/fonts/pt.ttf'),});
+    this.setState({fontLoaded: true});
+  }
      
-    render() {
-        return (
-            <ImageBackground
-                source = {require('../assets/blue-bin.jpg')}
-                style = {styles.container}>
-                <View style = {styles.parentView}>
-                    {this.state.fontLoaded ? (<Text style={styles.logoText}>!arbitrary</Text>) : null}
-                    <Image source = {require('../assets/sadparrot.gif')} style = {styles.logo}/>
-                    <Text style = {styles.textBox}>With its easily navigatible interface, the Chicago-based app, !arbitrary, aims to educate the masses about recyclable items, while emphasizing the importance of being sustainable.</Text>
-                    <View style = {styles.redirect}>
-                        <Button
-                            title="Start"
-                            onPress={() => this.props.navigation.navigate('Stats')}
-                         /> 
-                    </View>    
-                </View>
-            </ImageBackground>
-        );}
-    }
+  render() {
+    return (
+      <ImageBackground
+        source = {require('../assets/blue-bin.jpg')}
+        style = {styles.container}>
+        <View style = {styles.parentView}>
+          {this.state.fontLoaded ? (<Text style={styles.logoText}>!arbitrary</Text>) : null}
+          <Image source = {require('../assets/sadparrot.gif')} style = {styles.logo}/>
+          <Text style = {styles.textBox}>With its easily navigatible interface, the Chicago-based app, !arbitrary, aims to educate the masses about recyclable items, while emphasizing the importance of being sustainable.</Text>
+          <View style = {styles.redirect}>
+            <Button
+              title="Start"
+              onPress={() => this.props.navigation.navigate('Stats')}
+            /> 
+          </View>    
+        </View>
+      </ImageBackground>
+    );}
+  }
 
 const styles = StyleSheet.create({
   container: {
