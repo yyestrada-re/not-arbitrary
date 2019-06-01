@@ -4,6 +4,7 @@ import Initial from './components/Initial'
 import Statistics from './components/Statistics'
 import Contaminated from './components/Contaminated'
 import Apartments from './components/Apartments'
+import Home from './components/Home'
 
 const RootStack = createStackNavigator({
   Default: {
@@ -17,6 +18,9 @@ const RootStack = createStackNavigator({
   },
   Apartments: {
     screen: Apartments
+  },
+  Home: {
+    screen: Home
   }
 });
 
