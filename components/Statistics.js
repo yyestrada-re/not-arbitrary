@@ -2,6 +2,7 @@ import React from 'react';
 import { StyleSheet, ImageBackground, Image, View, Text, Button } from 'react-native';
 import { Font } from 'expo';
 
+//okay but can I just let it be known that I've never made an app before. And I've also never used JS before :(
 export default class Statistics extends React.Component {
   static navigationOptions = {header: null} 
 
@@ -21,6 +22,10 @@ export default class Statistics extends React.Component {
   render() {
     return(
       <View style = {styles.infographics}>
+        <Image
+          style = {{marginTop: 40}}
+          source = {require('../assets/trash.png')}
+        />
         {this.state.fontLoaded ? (
           <Text style={styles.statsText}>
             The percentage of Chicago’s total waste that is recycled through the city’s blue cart program is 9.71 percent, 
