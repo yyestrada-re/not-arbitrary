@@ -23,7 +23,7 @@ export default class Statistics extends React.Component {
     return(
       <View style = {styles.infographics}>
         <Image
-          style = {{marginTop: 40}}
+          style = {{marginTop: 40, height: 200, marginLeft: 80, width: 200}}
           source = {require('../assets/trash.png')}
         />
         {this.state.fontLoaded ? (
@@ -39,6 +39,13 @@ export default class Statistics extends React.Component {
             </Text>
           ) : null}
         </View>
+        <View style = {styles.redirect}>
+          <Button
+            title="Continue"
+            onPress={() => this.props.navigation.navigate('Contaminate')}
+          />
+        </View>
+          
       </View>
     );
   }
@@ -54,9 +61,9 @@ const styles = StyleSheet.create({
   },
   statsText: {
     color: '#fff',
-    fontSize: 20,
+    fontSize: 18,
     fontFamily: 'Space-Mono',
-    marginTop: 50,
+    //marginTop: 50,
     marginRight: 100,
     marginLeft: 10
   },
@@ -64,13 +71,14 @@ const styles = StyleSheet.create({
     color: '#fff',
     fontSize: 14,
     fontFamily: 'Karla',
-    marginTop: 80,
-    marginLeft: 20
+    marginTop: 30,
+    marginLeft: 10
   },
   redirect: {
-    width: 80,
+    width: 90,
     height: 30,
-    marginTop: 30
+    marginTop: 30,
+    marginLeft: 250
   }
 });
 
