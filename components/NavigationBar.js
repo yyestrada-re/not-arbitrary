@@ -1,5 +1,5 @@
 import React from "react";
-import {Text, View} from 'react-native';
+import {Image, View} from 'react-native';
 import {createBottomTabNavigator, createAppContainer} from 'react-navigation';
 
 class HomeScreen extends React.Component {
