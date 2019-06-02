@@ -7,14 +7,14 @@ export default class Statistics extends React.Component {
   static navigationOptions = {header: null} 
 
   componentDidMount() {
-    //Font.loadAsync({'Karla': require('../assets/fonts/Karla-Regular.ttf')});
+    Font.loadAsync({'pt': require('../assets/fonts/pt.ttf')});
     Font.loadAsync({'Space-Mono': require('../assets/fonts/SpaceMono-Regular.ttf')});
   }
 
   state = { fontLoaded: false};
     
   async componentDidMount() {
-    //await Font.loadAsync({'Karla': require('../assets/fonts/Karla-Regular.ttf'),});
+    await Font.loadAsync({'pt': require('../assets/fonts/pt.ttf'),});
     await Font.loadAsync({'Space-Mono': require('../assets/fonts/SpaceMono-Regular.ttf'),});
     this.setState({fontLoaded: true});
   }
@@ -22,21 +22,22 @@ export default class Statistics extends React.Component {
   render() {
     return(
       <View style = {styles.infographics}>
-        <Image
-          style = {{marginTop: 40, height: 200, marginLeft: 80, width: 200}}
-          source = {require('../assets/trash.png')}
-        />
-        {this.state.fontLoaded ? (
+        <View style={{width: 260, height:200, flex:1, flexDirection:'row', marginTop: 40}}>
+          <Image source = {require('../assets/recycle.png')} style = {{marginTop: 30, height: 200, width: 160}}/>
+          {this.state.fontLoaded ? (
           <Text style={styles.statsText}>
-            The percentage of Chicago’s total waste that is recycled through the city’s blue cart program is 9.71 percent, 
+            The percentage of Chicago’s total waste that is recycled through the city’s blue bin program is 9.71%, 
             <Text style={{fontWeight: 'bold', color: '#FF4545'}}>the worst rate in the nation</Text>
           </Text>
-        ) : null}
-        <View>
-          <Text style = {styles.expand}>
-            Chicago ranks as the worst major city in the United States for recycling in residential areas. By comparison, cities like San Francisco and Seattle has recycling rates near 60 percent. But why? 
-          </Text>
+          ) : null}
         </View>
+      <View style = {styles.infographics}>
+        <Text style = {styles.expand}>
+         Chicago ranks as the worst major city in the United States for recycling in residential areas. {"\n\n"}By comparison, metropolitan cities like San Francisco and Seattle have recycling rates near 60 percent.{"\n\n"}
+         {this.state.fontLoaded ? (
+          <Text style = {{fontWeight: 'bold', marginTop: 20, color: '#FF4545', fontFamily: 'Space-Mono', fontSize: 20}}>So why is Chicago an exception?</Text>
+         ): null}
+        </Text>
         <View style = {styles.redirect}>
           <Button
             title="Continue"
@@ -44,8 +45,15 @@ export default class Statistics extends React.Component {
             onPress={() => this.props.navigation.navigate('Contaminate')}
           />
         </View>
-          
+        <View style = {styles.backwards}>
+          <Button
+            title="Go Back"
+            color= '#5990BF'
+            onPress={() => this.props.navigation.navigate('Initial')}
+          />
+        </View>
       </View>
+    </View>
     );
   }
 }
@@ -55,29 +63,36 @@ const styles = StyleSheet.create({
     flex: 1,
     width: '100%',
     height: '100%',
-    flexDirection: 'column',
-    backgroundColor: '#384D5C' //'#1B384F'
+    //flexDirection: 'column',
+    backgroundColor: '#384D5C', //'#1B384F'
   },
   statsText: {
     color: '#fff',
-    fontSize: 18,
+    fontSize: 17,
     fontFamily: 'Space-Mono',
-    //marginTop: 50,
-    marginRight: 100,
-    marginLeft: 10
+    marginTop: 20,
+    marginLeft: 10,
+    marginRight: 60
   },
   expand: {
     color: '#fff',
-    fontSize: 14,
+    fontSize: 16,
     fontFamily: 'sans-serif',
-    marginTop: 30,
-    marginLeft: 10
+    marginLeft: 20,
+    marginRight: 20,
+    marginTop: -10
   },
   redirect: {
     width: 90,
     height: 30,
-    marginTop: 30,
+    marginTop: 40,
     marginLeft: 250
+  },
+  backwards: {
+    width: 90,
+    height: 30,
+    marginTop: -30,
+    marginLeft: 25
   }
 });
 

@@ -30,6 +30,9 @@ const RootStack = createStackNavigator({
   },
   Recycle: {
     screen: Recycle
+  },
+  Initial: {
+    screen: Initial
   }
 });
 

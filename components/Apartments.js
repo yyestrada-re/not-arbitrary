@@ -6,13 +6,13 @@ export default class Apartments extends React.Component {
     static navigationOptions = {header: null} 
 
     componentDidMount() {
-        Font.loadAsync({'Karla': require('../assets/fonts/Karla-Regular.ttf')});
+        //Font.loadAsync({'Karla': require('../assets/fonts/Karla-Regular.ttf')});
         Font.loadAsync({'Space-Mono': require('../assets/fonts/SpaceMono-Regular.ttf')});
     }
     state = { fontLoaded: false};
     
   async componentDidMount() {
-    await Font.loadAsync({'pt': require('../assets/fonts/pt.ttf'),});
+    await Font.loadAsync({'Space-Mono': require('../assets/fonts/SpaceMono-Regular.ttf')});
     this.setState({fontLoaded: true});
   }
 
@@ -21,18 +21,30 @@ export default class Apartments extends React.Component {
         <View style = {styles.infographics}>
             <View>
                 <Image source = {require('../assets/apartment.png')} style = {styles.icon}/> 
+                {/*{this.state.fontLoaded ? (*/}
+                    <Text style = {styles.header}>
+                        Unlike single family homes, which are issued blue recycling carts by the Department of Streets and Sanitation,
+                        <Text style={{fontWeight: 'bold', color: '#FF4545'}}> larger apartments are required to provide their 
+                        own</Text> private recycling services for tenants.
+                    </Text>
+                {/*}) : null}*/}
                 <Text style = {styles.text}>
-                    Unlike single family homes, which are issued blue recycling carts by the Department of Streets and Sanitation, larger apartments are required by city law to provide their 
-                    own private recycling services for tenants.
-                </Text>
-                <Text style = {{color: '#fff', fontSize: 16, marginTop: 30, marginLeft: 40, fontFamily: 'Karla'}}>
-                    But because the law isn’t strictly enforced, some landlords fail to provide adequate recycling services and tenants are forced to 
+                    But because the law isn’t strictly enforced, 
+                    <Text style={{fontWeight: 'bold', color: '#FF4545'}}> some landlords fail to provide adequate recycling services</Text> and tenants are forced to 
                     be proactive to find out what recycling options are available to them or forgo recycling entirely.
                 </Text>
                 <View style = {styles.redirect}>
                     <Button
                         title= "Continue"
+                        color= '#5990BF'
                         onPress={() => this.props.navigation.navigate('NavBar')}
+                    />
+                </View>
+                <View style = {styles.backwards}>
+                    <Button
+                        title = "Go Back"
+                        color= '#5990BF'
+                        onPress={() => this.props.navigation.navigate('Contaminated')}
                     />
                 </View>
             </View>
@@ -43,9 +55,9 @@ export default class Apartments extends React.Component {
 
 const styles = StyleSheet.create({
     icon: {
-        height: '35%',
-        width: '50%',
-        marginLeft: 100,
+        height: '40%',
+        width: '60%',
+        marginLeft: 80,
         marginTop: 40
     },
     infographics: {
@@ -54,17 +66,32 @@ const styles = StyleSheet.create({
         height: '100%',
         backgroundColor: '#384D5C' //'#1B384F'
       },
+    header : {
+        fontFamily: 'sans-serif',
+        color: '#fff',
+        fontSize: 16,
+        marginLeft: 20,
+        marginRight: 20,
+        marginTop: 25
+    },
     text: {
-        fontFamily: 'Karla',
+        fontFamily: 'sans-serif',
         fontSize: 16,
         color: '#fff',
-        marginTop: 30,
-        marginLeft: 40
+        marginTop: 20,
+        marginLeft: 20,
+        marginRight: 20
     },
     redirect: {
         width: 90,
         height: 10,
         marginTop: 30,
         marginLeft: 250
-      }
+    },
+    backwards: {
+        width: 90,
+        height: 10,
+        marginTop: -10,
+        marginLeft: 25
+    }
 });

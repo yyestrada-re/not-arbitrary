@@ -4,7 +4,10 @@ import { Font } from 'expo';
 import { ScrollView } from 'react-native-gesture-handler';
 
 export default class Recycle extends React.Component {
-  //static navigationOptions = {header: null} 
+  static navigationOptions = {
+    header: null,
+    color: '#5990BF'
+  } 
 
   render() {
     return(
@@ -15,34 +18,45 @@ export default class Recycle extends React.Component {
             source = {require('../assets/recycle-sign.png')}
           />
           <Text style={styles.header}>The following CAN BE placed</Text>
-          <Text style = {{marginLeft: 100, fontFamily: 'sans-serif', fontSize: 20, color: '#89AF46', fontWeight: 'bold'}}> in a recycling bin </Text>     
+          <Text style = {{marginLeft: 90, fontFamily: 'sans-serif', fontSize: 20, color: '#89AF46', fontWeight: 'bold'}}> in a recycling bin </Text>     
           <View style={ styles.column }>
             <View style={ styles.row }>
 
               <Image source = {require('../assets/scienceparrot.gif')} style = {styles.tiny}/>
               <Text style = {styles.list}>
                 <Text style = {styles.specialBolded}>YOU MAY</Text>
-                {"\t"}recycle wire hangers! {"\t\t\t\t\t\t"}
+                {"\t"}recycle paper, including
               </Text>
+              <Text style = {styles.cont}>both glossy and non-glossy</Text>
+              <Text style = {styles.cont}>magazines! {"\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t"}</Text>
 
               <Image source = {require('../assets/scienceparrot.gif')} style = {styles.tiny}/>
               <Text style = {styles.list}>
                 <Text style = {styles.specialBolded}>YOU MAY</Text>
-                {"\t"}recycle any food or liquid!
+                {"\t"}recycle any corrugated
               </Text>
+              <Text style = {styles.cont}>cardboard! {"\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t"}</Text>
 
               <Image source = {require('../assets/scienceparrot.gif')} style = {styles.tiny}/>
               <Text style = {styles.list}>
                 <Text style = {styles.specialBolded}>YOU MAY</Text>
-                {"\t"}recycle soiled paper fibers!
+                {"\t"}recycle paperboard or 
               </Text>
+              <Text style = {styles.cont}> chipboard (cereal boxes, tissue boxes, etc)! {"\t\t"}</Text>
 
               <Image source = {require('../assets/scienceparrot.gif')} style = {styles.tiny}/>
               <Text style = {styles.list}>
                 <Text style = {styles.specialBolded}>YOU MAY</Text>
-                {"\t"}recycle rechargeable batteries!
+                {"\t"}recycle all plastic bottles and
               </Text>
-
+              <Text style = {styles.cont}>containers with the following symbols: {"\t\t\n"}</Text>
+            </View>
+          </View>
+          
+          <Image source = {require('../assets/recycling-num.png')} style = {{marginLeft: 30}}/>
+          
+          <View style={ styles.column }>
+            <View style={ styles.row }>
               <Image source = {require('../assets/scienceparrot.gif')} style = {styles.tiny}/>
               <Text style = {styles.list}>
                 <Text style = {styles.specialBolded}>YOU MAY</Text>
@@ -85,28 +99,9 @@ export default class Recycle extends React.Component {
                 <Text style = {styles.specialBolded}>YOU MAY</Text>
                 {"\t"}recycle any motor oil!! {"\t\t\t"}
               </Text>
-
-              <Image source = {require('../assets/scienceparrot.gif')} style = {styles.tiny}/>
-              <Text style = {styles.list}>
-                <Text style = {styles.specialBolded}>YOU MAY</Text>
-                {"\t"}recycle any polystyrene {"\t\t"}
-              </Text>
-
-              <Image source = {require('../assets/scienceparrot.gif')} style = {styles.tiny}/>
-              <Text style = {styles.list}>
-                <Text style = {styles.specialBolded}>YOU MAY</Text>
-                {"\t"}recycle any hardback books!
-              </Text>
-
-              <Image source = {require('../assets/scienceparrot.gif')} style = {styles.tiny}/>
-              <Text style = {styles.list}>
-                <Text style = {styles.specialBolded}>YOU MAY</Text>
-                {"\t"}recycle any disposable utensils
-              </Text>
-              <Text style = {styles.cont}>even the biodegradable ones!</Text>
             </View>
+            <View style = {{height: 50, width: 300}}/>
           </View>
-          <View style = {{height: 50, width: 300}}/>
         </View>
       </ScrollView>
     );
@@ -128,7 +123,7 @@ const styles = StyleSheet.create({
     //marginTop: 50,
     fontWeight: 'bold',
     marginTop: 15,
-    marginLeft: 25
+    marginLeft: 40
   },
   redirect: {
     width: 130,
@@ -164,8 +159,8 @@ const styles = StyleSheet.create({
     fontFamily: 'sans-serif',
     color: '#fff',
     fontSize: 15,
-    marginTop: 6,
-    marginLeft: 50
+    marginTop: 4,
+    marginLeft: 55
   },
   specialBolded: {
     fontWeight: 'bold', 

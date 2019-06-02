@@ -7,6 +7,12 @@ import Home from './Home';
 import Effects from './Effects';
 import Items from './Items';
 
+navigationOptions = {
+    header: null,
+    color: '#5990BF'
+} 
+
+
 const TabNavigator = createBottomTabNavigator ({
  Default: {
     screen: Home,
