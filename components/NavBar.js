@@ -1,31 +1,49 @@
 import React from "react";
-import {Image, View, Icon} from 'react-native';
+import {Image, View, Icon, tab} from 'react-native';
 import {createBottomTabNavigator, createAppContainer} from 'react-navigation';
-import Ionicons from '../node_modules/@expo/vector-icons';
+import {Ionicons} from '../node_modules/@expo/vector-icons';
 
 import Home from './Home';
 import Effects from './Effects';
 import Items from './Items';
 
-navigationOptions = {
-    header: null,
-    color: '#5990BF'
-} 
-
-
 const TabNavigator = createBottomTabNavigator ({
- Default: {
+ Home: {
     screen: Home,
-    /*navigationOptions: {
-        tabBarLabel: "Home Page",
-        tabBarIcon: ({tintColor}) => (
-            <Icon source = {require('../assets/home.png')} size = {30}/>
-        ),
-        tabBarOptions: {showIcon: true},
-    }*/
+      navigationOptions: {
+        tabBarLabel: "Home",
+        tabBarIcon: ({ tintColor }) => (
+          <Image
+            source={require("../assets/home.png")}
+            style={{ width: 26, height: 26, tintColor: tintColor }}
+          />
+      )
+    }
  },
- Effects: {screen: Effects},
- Items: {screen: Items},
+ Effects: {
+    screen: Effects,
+    navigationOptions: {
+        tabBarLabel: "Effects",
+        tabBarIcon: ({ tintColor }) => (
+          <Image
+            source={require("../assets/questions.png")}
+            style={{ width: 26, height: 26, tintColor: tintColor }}
+          />
+      )
+    }
+ },
+Items: {
+    screen: Items,
+    navigationOptions: {
+        tabBarLabel: "Items",
+        tabBarIcon: ({ tintColor }) => (
+          <Image
+            source={require("../assets/recycle.png")}
+            style={{ width: 26, height: 26, tintColor: tintColor }}
+          />
+      )
+    }
+ }
 });
 
 
