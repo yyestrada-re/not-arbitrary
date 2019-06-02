@@ -66,7 +66,7 @@ export default class Effects extends React.Component {
               <Image source = {require('../assets/sadparrot.gif')} style = {styles.tiny}/>
               <Text style = {styles.list}>
                 <Text style = {styles.specialBolded}>Energy Consumption</Text>
-                {"\t"}Huge amounts 
+                {"\t"} Huge amounts 
               </Text>
               <Text style = {styles.cont}>of energy are used when making products from raw materials. Recycling requires slighly less energy and therefore helps preserve natural resources. </Text>
 
