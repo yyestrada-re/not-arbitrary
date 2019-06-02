@@ -7,9 +7,9 @@ import Effects from './Effects';
 import Items from './Items';
 
 const TabNavigator = createBottomTabNavigator ({
- Default: Home,
- Effects: Effects,
- Items: Items,
+ Default: {screen: Home},
+ Effects: {screen: Effects},
+ Items: {screen: Items},
 });
 
 export default createAppContainer(TabNavigator)
