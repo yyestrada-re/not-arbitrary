@@ -4,6 +4,7 @@ import { Constants } from 'expo';
 
 import { Card } from 'react-native-paper';
 import Locations from './Locations';
+import Partedos from './Partedos';
 
 export default class Home extends React.Component {
   render() {
@@ -11,8 +12,8 @@ export default class Home extends React.Component {
       <View style={styles.container}>
         <Card>
           <Locations/>
-          <Locations />
-          <Locations />
+          <Partedos/>
+          <Partedos/>
         </Card>
       </View>
     );
