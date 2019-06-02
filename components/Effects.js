@@ -4,95 +4,72 @@ import { Font } from 'expo';
 import { ScrollView } from 'react-native-gesture-handler';
 
 export default class Effects extends React.Component {
+  componentDidMount() {
+    Font.loadAsync({'pt': require('../assets/fonts/pt.ttf')});
+  }
+
+  state = { fontLoaded: false};
+    
+  async componentDidMount() {
+    await Font.loadAsync({'pt': require('../assets/fonts/pt.ttf'),});
+    this.setState({fontLoaded: true});
+  };
+
   render() {
     return(
       <ScrollView>
         <View style = {styles.infographics}>
           <Image
             style = {{marginTop: 40, height: 200, marginLeft: 80, width: 200}}
-            source = {require('../assets/danger.png')}
+            source = {require('../assets/warning.png')}
           />
-          <Text style={styles.header}>Social and Environmental Impacts of a Growing Landfill</Text>
+          <Text style={styles.header}>The Global Implications of</Text>
+          <Text style = {styles.partTwo}>!Recycling</Text>
           <View style={ styles.column }>
             <View style={ styles.row }>
 
               <Image source = {require('../assets/sadparrot.gif')} style = {styles.tiny}/>
               <Text style = {styles.list}>
-                <Text style = {styles.specialBolded}>YOU MAY</Text>
-                {"\t"}recycle paper, including
+                <Text style = {styles.specialBolded}>Deforestation</Text>
+                {"\t"} More trash leads to 
               </Text>
-              <Text style = {styles.cont}>both glossy and non-glossy</Text>
-              <Text style = {styles.cont}>magazines! {"\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t"}</Text>
+              <Text style = {styles.cont}>an increased need for space to allocate for a growing landfill. To name a few effects, deforestation can be attributed to an array of different environmental consequences including desertfication, soil erosion, greenhouse gas emisions, increased flooding, and loss of biodiversity. {"\t\t"}</Text>
 
               <Image source = {require('../assets/sadparrot.gif')} style = {styles.tiny}/>
               <Text style = {styles.list}>
-                <Text style = {styles.specialBolded}>YOU MAY</Text>
-                {"\t"}recycle any corrugated
+                <Text style = {styles.specialBolded}>Increased Greenhouse Gas Emissions</Text>
+                {"\t"} 
               </Text>
-              <Text style = {styles.cont}>cardboard! {"\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t"}</Text>
+              <Text style = {styles.cont}>The incineration of landfill, or overall decomposition of trash, releases greenhouse gases such as Methane, which is 3x more potent than Carbon Dioxide. {"\t\t"}</Text>
 
               <Image source = {require('../assets/sadparrot.gif')} style = {styles.tiny}/>
               <Text style = {styles.list}>
-                <Text style = {styles.specialBolded}>YOU MAY</Text>
-                {"\t"}recycle paperboard or 
+                <Text style = {styles.specialBolded}>E-Waste and Food Chains</Text>
+                {"\t"}Heavy
               </Text>
-              <Text style = {styles.cont}> chipboard (cereal boxes, tissue boxes, etc)! {"\t\t"}</Text>
+              <Text style = {styles.cont}>metals found in electronics, such as lead, copper, and chromium, can be hazardous when disposed of improperly. Heavy metals are fat soluble and can bioaccumulate and biomagnify.</Text>
 
               <Image source = {require('../assets/sadparrot.gif')} style = {styles.tiny}/>
               <Text style = {styles.list}>
-                <Text style = {styles.specialBolded}>YOU MAY</Text>
-                {"\t"}recycle all plastic bottles and
+                <Text style = {styles.specialBolded}>Leachate</Text>
+                {"\t"}Leachate is a toxic liquid
               </Text>
-              <Text style = {styles.cont}>containers with the following symbols: {"\t\t\n"}</Text>
-            </View>
-          </View>
-          
-          <Image source = {require('../assets/recycling-num.png')} style = {{marginLeft: 30}}/>
-          
-          <View style={ styles.column }>
-            <View style={ styles.row }>
-              <Image source = {require('../assets/sadparrot.gif')} style = {styles.tiny}/>
-              <Text style = {styles.list}>
-                <Text style = {styles.specialBolded}>YOU MAY</Text>
-                {"\t"}recycle plastic bags/wrap!
-              </Text>
+              <Text style = {styles.cont}>that forms when waste breaks down in a landfill and water filters through. Leachate is highly toxic and can pollute aquifers, waterways, and the surrounding soil.</Text>
 
               <Image source = {require('../assets/sadparrot.gif')} style = {styles.tiny}/>
               <Text style = {styles.list}>
-                <Text style = {styles.specialBolded}>YOU MAY</Text>
-                {"\t"}recycle any scrap metal! {"\t\t\t"}
+                <Text style = {styles.specialBolded}>Aquatic Life</Text>
+                {"\t"}Plastic that is improperly
               </Text>
+              <Text style = {styles.cont}>disposed of can wind up in the ocean and other major water bodies where they can remain there for hundreds of years. Aquatic life may also get caught in loose plastic or die by inhaling toxic materials.</Text>
 
               <Image source = {require('../assets/sadparrot.gif')} style = {styles.tiny}/>
               <Text style = {styles.list}>
-                <Text style = {styles.specialBolded}>YOU MAY</Text>
-                {"\t"}recycle any pharmaceuticals!
+                <Text style = {styles.specialBolded}>Energy Consumption</Text>
+                {"\t"}Huge amounts 
               </Text>
+              <Text style = {styles.cont}>of energy are used when making products from raw materials. Recycling requires slighly less energy and therefore helps preserve natural resources. </Text>
 
-              <Image source = {require('../assets/sadparrot.gif')} style = {styles.tiny}/>
-              <Text style = {styles.list}>
-                <Text style = {styles.specialBolded}>YOU MAY</Text>
-                {"\t"}recycle any household 
-              </Text>
-              <Text style = {styles.cont}>chemicals (bleach, paint thinner, etc)!</Text>
-
-              <Image source = {require('../assets/sadparrot.gif')} style = {styles.tiny}/>
-              <Text style = {styles.list}>
-                <Text style = {styles.specialBolded}>YOU MAY</Text>
-                {"\t"}recycle any oil-based paint!
-              </Text>
-
-              <Image source = {require('../assets/sadparrot.gif')} style = {styles.tiny}/>
-              <Text style = {styles.list}>
-                <Text style = {styles.specialBolded}>YOU MAY</Text>
-                {"\t"}recycle any light bulbs! {"\t\t"}
-              </Text>
-
-              <Image source = {require('../assets/sadparrot.gif')} style = {styles.tiny}/>
-              <Text style = {styles.list}>
-                <Text style = {styles.specialBolded}>YOU MAY</Text>
-                {"\t"}recycle any motor oil!! {"\t\t\t"}
-              </Text>
             </View>
             <View style = {{height: 50, width: 300}}/>
           </View>
@@ -111,13 +88,22 @@ const styles = StyleSheet.create({
     backgroundColor: '#384D5C' //'#1B384F'
   },
   header: {
-    color: '#89AF46',
+    color: '#FF4545',
     fontSize: 20,
     fontFamily: 'sans-serif',
     //marginTop: 50,
     fontWeight: 'bold',
     marginTop: 15,
-    marginLeft: 40
+    marginLeft: 50
+  },
+  partTwo: {
+    color: '#FF4545',
+    fontSize: 20,
+    fontFamily: 'sans-serif',
+    //marginTop: 50,
+    fontWeight: 'bold',
+    marginTop: 5,
+    marginLeft: 125
   },
   redirect: {
     width: 130,
@@ -153,13 +139,13 @@ const styles = StyleSheet.create({
     fontFamily: 'sans-serif',
     color: '#fff',
     fontSize: 15,
-    marginTop: 4,
+    marginTop: -1,
     marginLeft: 55
   },
   specialBolded: {
     fontWeight: 'bold', 
     fontFamily: 'sans-serif',
-    color: '#89AF46',
+    color: '#FF4545',
     fontSize: 15,
     marginTop: 21,
     marginLeft: 18
