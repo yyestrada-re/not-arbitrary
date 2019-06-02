@@ -32,7 +32,7 @@ export default class Apartments extends React.Component {
                 <View style = {styles.redirect}>
                     <Button
                         title= "Continue"
-                        onPress={() => this.props.navigation.navigate('Home')}
+                        onPress={() => this.props.navigation.navigate('NavBar')}
                     />
                 </View>
             </View>

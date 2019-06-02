@@ -3,19 +3,8 @@ import { StyleSheet, ImageBackground, Image, View, Text, Button } from 'react-na
 import { Font } from 'expo';
 import { ScrollView } from 'react-native-gesture-handler';
 
-export default class Items extends React.Component {
+export default class Recycle extends React.Component {
   //static navigationOptions = {header: null} 
-
-  componentDidMount() {
-    Font.loadAsync({'Space-Mono': require('../assets/fonts/SpaceMono-Regular.ttf')});
-  }
-
-  state = { fontLoaded: false};
-    
-  async componentDidMount() {
-    await Font.loadAsync({'Space-Mono': require('../assets/fonts/SpaceMono-Regular.ttf'),});
-    this.setState({fontLoaded: true});
-  };
 
   render() {
     return(
@@ -23,107 +12,99 @@ export default class Items extends React.Component {
         <View style = {styles.infographics}>
           <Image
             style = {{marginTop: 40, height: 200, marginLeft: 80, width: 200}}
-            source = {require('../assets/cancel.png')}
+            source = {require('../assets/recycle-sign.png')}
           />
-          <Text style={styles.header}>The following CANNOT BE placed</Text>
-          <Text style = {{marginLeft: 100, fontFamily: 'sans-serif', fontSize: 20, color: '#FF4545', fontWeight: 'bold'}}> in a recycling bin </Text>     
+          <Text style={styles.header}>The following CAN BE placed</Text>
+          <Text style = {{marginLeft: 100, fontFamily: 'sans-serif', fontSize: 20, color: '#89AF46', fontWeight: 'bold'}}> in a recycling bin </Text>     
           <View style={ styles.column }>
             <View style={ styles.row }>
 
-              {/*wire hanger*/}
-              <Image source = {require('../assets/evilparrot.gif')} style = {styles.tiny}/>
+              <Image source = {require('../assets/scienceparrot.gif')} style = {styles.tiny}/>
               <Text style = {styles.list}>
-                <Text style = {styles.specialBolded}>DO NOT</Text>
+                <Text style = {styles.specialBolded}>YOU MAY</Text>
                 {"\t"}recycle wire hangers! {"\t\t\t\t\t\t"}
               </Text>
 
-              <Image source = {require('../assets/evilparrot.gif')} style = {styles.tiny}/>
+              <Image source = {require('../assets/scienceparrot.gif')} style = {styles.tiny}/>
               <Text style = {styles.list}>
-                <Text style = {styles.specialBolded}>DO NOT</Text>
+                <Text style = {styles.specialBolded}>YOU MAY</Text>
                 {"\t"}recycle any food or liquid!
               </Text>
 
-              <Image source = {require('../assets/evilparrot.gif')} style = {styles.tiny}/>
+              <Image source = {require('../assets/scienceparrot.gif')} style = {styles.tiny}/>
               <Text style = {styles.list}>
-                <Text style = {styles.specialBolded}>DO NOT</Text>
+                <Text style = {styles.specialBolded}>YOU MAY</Text>
                 {"\t"}recycle soiled paper fibers!
               </Text>
 
-              <Image source = {require('../assets/evilparrot.gif')} style = {styles.tiny}/>
+              <Image source = {require('../assets/scienceparrot.gif')} style = {styles.tiny}/>
               <Text style = {styles.list}>
-                <Text style = {styles.specialBolded}>DO NOT</Text>
+                <Text style = {styles.specialBolded}>YOU MAY</Text>
                 {"\t"}recycle rechargeable batteries!
               </Text>
 
-              <Image source = {require('../assets/evilparrot.gif')} style = {styles.tiny}/>
+              <Image source = {require('../assets/scienceparrot.gif')} style = {styles.tiny}/>
               <Text style = {styles.list}>
-                <Text style = {styles.specialBolded}>DO NOT</Text>
+                <Text style = {styles.specialBolded}>YOU MAY</Text>
                 {"\t"}recycle plastic bags/wrap!
               </Text>
 
-              <Image source = {require('../assets/evilparrot.gif')} style = {styles.tiny}/>
+              <Image source = {require('../assets/scienceparrot.gif')} style = {styles.tiny}/>
               <Text style = {styles.list}>
-                <Text style = {styles.specialBolded}>DO NOT</Text>
+                <Text style = {styles.specialBolded}>YOU MAY</Text>
                 {"\t"}recycle any scrap metal! {"\t\t\t"}
               </Text>
 
-              <Image source = {require('../assets/evilparrot.gif')} style = {styles.tiny}/>
+              <Image source = {require('../assets/scienceparrot.gif')} style = {styles.tiny}/>
               <Text style = {styles.list}>
-                <Text style = {styles.specialBolded}>DO NOT</Text>
+                <Text style = {styles.specialBolded}>YOU MAY</Text>
                 {"\t"}recycle any pharmaceuticals!
               </Text>
 
-              <Image source = {require('../assets/evilparrot.gif')} style = {styles.tiny}/>
+              <Image source = {require('../assets/scienceparrot.gif')} style = {styles.tiny}/>
               <Text style = {styles.list}>
-                <Text style = {styles.specialBolded}>DO NOT</Text>
+                <Text style = {styles.specialBolded}>YOU MAY</Text>
                 {"\t"}recycle any household 
               </Text>
               <Text style = {styles.cont}>chemicals (bleach, paint thinner, etc)!</Text>
 
-              <Image source = {require('../assets/evilparrot.gif')} style = {styles.tiny}/>
+              <Image source = {require('../assets/scienceparrot.gif')} style = {styles.tiny}/>
               <Text style = {styles.list}>
-                <Text style = {styles.specialBolded}>DO NOT</Text>
+                <Text style = {styles.specialBolded}>YOU MAY</Text>
                 {"\t"}recycle any oil-based paint!
               </Text>
 
-              <Image source = {require('../assets/evilparrot.gif')} style = {styles.tiny}/>
+              <Image source = {require('../assets/scienceparrot.gif')} style = {styles.tiny}/>
               <Text style = {styles.list}>
-                <Text style = {styles.specialBolded}>DO NOT</Text>
+                <Text style = {styles.specialBolded}>YOU MAY</Text>
                 {"\t"}recycle any light bulbs! {"\t\t"}
               </Text>
 
-              <Image source = {require('../assets/evilparrot.gif')} style = {styles.tiny}/>
+              <Image source = {require('../assets/scienceparrot.gif')} style = {styles.tiny}/>
               <Text style = {styles.list}>
-                <Text style = {styles.specialBolded}>DO NOT</Text>
+                <Text style = {styles.specialBolded}>YOU MAY</Text>
                 {"\t"}recycle any motor oil!! {"\t\t\t"}
               </Text>
 
-              <Image source = {require('../assets/evilparrot.gif')} style = {styles.tiny}/>
+              <Image source = {require('../assets/scienceparrot.gif')} style = {styles.tiny}/>
               <Text style = {styles.list}>
-                <Text style = {styles.specialBolded}>DO NOT</Text>
+                <Text style = {styles.specialBolded}>YOU MAY</Text>
                 {"\t"}recycle any polystyrene {"\t\t"}
               </Text>
 
-              <Image source = {require('../assets/evilparrot.gif')} style = {styles.tiny}/>
+              <Image source = {require('../assets/scienceparrot.gif')} style = {styles.tiny}/>
               <Text style = {styles.list}>
-                <Text style = {styles.specialBolded}>DO NOT</Text>
+                <Text style = {styles.specialBolded}>YOU MAY</Text>
                 {"\t"}recycle any hardback books!
               </Text>
 
-              <Image source = {require('../assets/evilparrot.gif')} style = {styles.tiny}/>
+              <Image source = {require('../assets/scienceparrot.gif')} style = {styles.tiny}/>
               <Text style = {styles.list}>
-                <Text style = {styles.specialBolded}>DO NOT</Text>
+                <Text style = {styles.specialBolded}>YOU MAY</Text>
                 {"\t"}recycle any disposable utensils
               </Text>
               <Text style = {styles.cont}>even the biodegradable ones!</Text>
             </View>
-          </View>
-          <View style = {styles.redirect}>
-            <Button
-              title="So what CAN I recycle?"
-              color= '#5990BF'
-              onPress={() => this.props.navigation.navigate('Recycle')}
-            /> 
           </View>
           <View style = {{height: 50, width: 300}}/>
         </View>
@@ -141,7 +122,7 @@ const styles = StyleSheet.create({
     backgroundColor: '#384D5C' //'#1B384F'
   },
   header: {
-    color: '#FF4545',
+    color: '#89AF46',
     fontSize: 20,
     fontFamily: 'sans-serif',
     //marginTop: 50,
@@ -189,7 +170,7 @@ const styles = StyleSheet.create({
   specialBolded: {
     fontWeight: 'bold', 
     fontFamily: 'sans-serif',
-    color: '#FF4545',
+    color: '#89AF46',
     fontSize: 15,
     marginTop: 21,
     marginLeft: 18

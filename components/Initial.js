@@ -28,6 +28,7 @@ export default class Initial extends React.Component {
           <View style = {styles.redirect}>
             <Button
               title="Start"
+              color= '#5990BF'
               onPress={() => this.props.navigation.navigate('Stats')}
             /> 
           </View>    

@@ -6,14 +6,14 @@ export default class Contaminated extends React.Component {
   static navigationOptions = {header: null} 
 
   componentDidMount() {
-    Font.loadAsync({'Karla': require('../assets/fonts/Karla-Regular.ttf')});
+    //Font.loadAsync({'Karla': require('../assets/fonts/Karla-Regular.ttf')});
     Font.loadAsync({'Space-Mono': require('../assets/fonts/SpaceMono-Regular.ttf')});
   }
 
   state = { fontLoaded: false};
     
   async componentDidMount() {
-    await Font.loadAsync({'Karla': require('../assets/fonts/Karla-Regular.ttf'),});
+    //await Font.loadAsync({'Karla': require('../assets/fonts/Karla-Regular.ttf'),});
     await Font.loadAsync({'Space-Mono': require('../assets/fonts/SpaceMono-Regular.ttf'),});
     this.setState({fontLoaded: true});
   }
@@ -30,11 +30,9 @@ export default class Contaminated extends React.Component {
                      “Since 2014, private and municipal waste hauling crews labeled at least 577,886 recycling bins as ‘grossly contaminated’ with improper items” 
                 </Text>
             ): null}
-            {this.state.fontLoaded ? (
-                <Text style={styles.statsText}>
-                    One reason is the system that allows private haulers to label bins “contaminated” and send them to landfills, if improper materials are found. {"\n\n"}Under city rules, one plastic bag or food item improperly placed in a recycling bin could mean the whole bin is labeled “grossly contaminated.” 
-                </Text>
-            ) : null}
+            <Text style={styles.statsText}>
+              One reason is the system that allows private haulers to label bins “contaminated” and send them to landfills, if improper materials are found. {"\n\n"}Under city rules, one plastic bag or food item improperly placed in a recycling bin could mean the whole bin is labeled “grossly contaminated.” 
+            </Text>
             <View style = {styles.redirect}>
                 <Button
                     title = "Next"
@@ -57,7 +55,7 @@ const styles = StyleSheet.create({
   statsText: {
     color: '#fff',
     fontSize: 15,
-    fontFamily: 'Karla',
+    fontFamily: 'sans-serif',
     marginLeft: 20,
     marginRight: 20,
     marginTop: 35

@@ -7,14 +7,14 @@ export default class Statistics extends React.Component {
   static navigationOptions = {header: null} 
 
   componentDidMount() {
-    Font.loadAsync({'Karla': require('../assets/fonts/Karla-Regular.ttf')});
+    //Font.loadAsync({'Karla': require('../assets/fonts/Karla-Regular.ttf')});
     Font.loadAsync({'Space-Mono': require('../assets/fonts/SpaceMono-Regular.ttf')});
   }
 
   state = { fontLoaded: false};
     
   async componentDidMount() {
-    await Font.loadAsync({'Karla': require('../assets/fonts/Karla-Regular.ttf'),});
+    //await Font.loadAsync({'Karla': require('../assets/fonts/Karla-Regular.ttf'),});
     await Font.loadAsync({'Space-Mono': require('../assets/fonts/SpaceMono-Regular.ttf'),});
     this.setState({fontLoaded: true});
   }
@@ -33,15 +33,14 @@ export default class Statistics extends React.Component {
           </Text>
         ) : null}
         <View>
-          {this.state.fontLoaded ? (
-            <Text style = {styles.expand}>
-              Chicago ranks as the worst major city in the United States for recycling in residential areas. By comparison, cities like San Francisco and Seattle has recycling rates near 60 percent. But why? 
-            </Text>
-          ) : null}
+          <Text style = {styles.expand}>
+            Chicago ranks as the worst major city in the United States for recycling in residential areas. By comparison, cities like San Francisco and Seattle has recycling rates near 60 percent. But why? 
+          </Text>
         </View>
         <View style = {styles.redirect}>
           <Button
             title="Continue"
+            color= '#5990BF'
             onPress={() => this.props.navigation.navigate('Contaminate')}
           />
         </View>
@@ -70,7 +69,7 @@ const styles = StyleSheet.create({
   expand: {
     color: '#fff',
     fontSize: 14,
-    fontFamily: 'Karla',
+    fontFamily: 'sans-serif',
     marginTop: 30,
     marginLeft: 10
   },

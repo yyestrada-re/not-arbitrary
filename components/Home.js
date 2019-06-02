@@ -6,13 +6,12 @@ export default class Home extends React.Component {
     static navigationOptions = {header: null} 
 
     componentDidMount() {
-        Font.loadAsync({'Karla': require('../assets/fonts/Karla-Regular.ttf')});
         Font.loadAsync({'Space-Mono': require('../assets/fonts/SpaceMono-Regular.ttf')});
     }
     state = { fontLoaded: false};
     
   async componentDidMount() {
-    await Font.loadAsync({'pt': require('../assets/fonts/pt.ttf'),});
+    await Font.loadAsync({'Space-Mono': require('../assets/fonts/SpaceMono-Regular.ttf'),});
     this.setState({fontLoaded: true});
   }
   
