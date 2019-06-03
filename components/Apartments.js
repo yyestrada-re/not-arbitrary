@@ -44,7 +44,7 @@ export default class Apartments extends React.Component {
                     <Button
                         title = "Go Back"
                         color= '#5990BF'
-                        onPress={() => this.props.navigation.navigate('Contaminated')}
+                        onPress={() => this.props.navigation.navigate('Contaminate')}
                     />
                 </View>
             </View>
