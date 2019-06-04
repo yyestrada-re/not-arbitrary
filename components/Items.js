@@ -4,7 +4,7 @@ import { Font } from 'expo';
 import { ScrollView } from 'react-native-gesture-handler';
 
 export default class Items extends React.Component {
-  //static navigationOptions = {header: null} 
+  static navigationOptions = {header: null} 
 
   componentDidMount() {
     Font.loadAsync({'Space-Mono': require('../assets/fonts/SpaceMono-Regular.ttf')});

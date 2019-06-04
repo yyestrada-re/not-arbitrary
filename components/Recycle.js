@@ -1,13 +1,9 @@
 import React from 'react';
 import { StyleSheet, ImageBackground, Image, View, Text, Button } from 'react-native';
-import { Font } from 'expo';
 import { ScrollView } from 'react-native-gesture-handler';
 
 export default class Recycle extends React.Component {
-  static navigationOptions = {
-    header: null,
-    color: '#5990BF'
-  } 
+  static navigationOptions = {header: null} 
 
   render() {
     return(
@@ -100,6 +96,13 @@ export default class Recycle extends React.Component {
                 {"\t"}recycle any motor oil!! {"\t\t\t"}
               </Text>
             </View>
+            <View style = {styles.backwards}>
+                    <Button
+                        title = "Go Back"
+                        color= '#5990BF'
+                        onPress={() => this.props.navigation.navigate('Items')}
+                    />
+                </View>
             <View style = {{height: 50, width: 300}}/>
           </View>
         </View>
@@ -147,6 +150,12 @@ const styles = StyleSheet.create({
     height: 30,
     marginLeft: 15,
     marginTop: 10
+  },
+  backwards: {
+    width: 90,
+    height: 10,
+    marginTop: 20,
+    marginLeft: 25
   },
   list: {
     fontFamily: 'sans-serif',

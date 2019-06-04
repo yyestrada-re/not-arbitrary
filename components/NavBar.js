@@ -6,6 +6,7 @@ import {Ionicons} from '../node_modules/@expo/vector-icons';
 import Home from './Home';
 import Effects from './Effects';
 import Items from './Items';
+import Statistics from "./Statistics";
 
 const TabNavigator = createBottomTabNavigator ({
  Home: {
@@ -15,7 +16,7 @@ const TabNavigator = createBottomTabNavigator ({
         tabBarIcon: ({ tintColor }) => (
           <Image
             source={require("../assets/home.png")}
-            style={{ width: 26, height: 26, tintColor: tintColor }}
+            style={{ width: 20, height: 20, tintColor: tintColor }}
           />
       )
     }
@@ -27,7 +28,7 @@ const TabNavigator = createBottomTabNavigator ({
         tabBarIcon: ({ tintColor }) => (
           <Image
             source={require("../assets/questions.png")}
-            style={{ width: 26, height: 26, tintColor: tintColor }}
+            style={{ width: 20, height: 20, tintColor: tintColor }}
           />
       )
     }
@@ -39,11 +40,22 @@ Items: {
         tabBarIcon: ({ tintColor }) => (
           <Image
             source={require("../assets/recycle.png")}
-            style={{ width: 26, height: 26, tintColor: tintColor }}
+            style={{ width: 20, height: 20, tintColor: tintColor }}
           />
       )
     }
- }
+ },
+  About: {
+    screen: Statistics,
+    navigationOptions: {
+      tabBarLabel: "About",
+      tabBarIcon: ({ tintColor }) => (
+        <Image
+          source={require("../assets/info.png")}
+          style={{ width: 20, height: 20, tintColor: tintColor }}
+        />
+    )
+  }}
 });
 
 

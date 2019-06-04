@@ -29,7 +29,7 @@ export default class Initial extends React.Component {
             <Button
               title="Start"
               color= '#5990BF'
-              onPress={() => this.props.navigation.navigate('Stats')}
+              onPress={() => this.props.navigation.navigate('NavBar')}
             /> 
           </View>    
         </View>
@@ -77,4 +77,3 @@ const styles = StyleSheet.create({
     marginTop: 30
   }
 });
-

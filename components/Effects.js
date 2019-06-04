@@ -4,6 +4,8 @@ import { Font } from 'expo';
 import { ScrollView } from 'react-native-gesture-handler';
 
 export default class Effects extends React.Component {
+  static navigationOptions = {header: null} 
+  
   componentDidMount() {
     Font.loadAsync({'pt': require('../assets/fonts/pt.ttf')});
   }

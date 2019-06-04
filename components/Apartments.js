@@ -33,13 +33,6 @@ export default class Apartments extends React.Component {
                     <Text style={{fontWeight: 'bold', color: '#FF4545'}}> some landlords fail to provide adequate recycling services</Text> and tenants are forced to 
                     be proactive to find out what recycling options are available to them or forgo recycling entirely.
                 </Text>
-                <View style = {styles.redirect}>
-                    <Button
-                        title= "Continue"
-                        color= '#5990BF'
-                        onPress={() => this.props.navigation.navigate('NavBar')}
-                    />
-                </View>
                 <View style = {styles.backwards}>
                     <Button
                         title = "Go Back"
@@ -91,7 +84,7 @@ const styles = StyleSheet.create({
     backwards: {
         width: 90,
         height: 10,
-        marginTop: -10,
+        marginTop: 20,
         marginLeft: 25
     }
 });
