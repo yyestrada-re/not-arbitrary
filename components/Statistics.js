@@ -38,10 +38,6 @@ export default class Statistics extends React.Component {
           <Text style = {{fontWeight: 'bold', marginTop: 20, color: '#FF4545', fontFamily: 'Space-Mono', fontSize: 20}}>So why is Chicago an exception?</Text>
          ): null}
         </Text>
-        <Text style = {{marginTop: 20, marginLeft: 20, fontSize: 15, fontFamily: 'sans-serif', color: '#fff'}}>
-            <Text style = {{fontWeight: 'bold'}}>Source: </Text>
-            WTTW News
-        </Text>
         <View style = {styles.redirect}>
           <Button
             title="Continue"
