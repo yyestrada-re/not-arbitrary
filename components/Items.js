@@ -118,6 +118,12 @@ export default class Items extends React.Component {
               <Text style = {styles.cont}>even the biodegradable ones!</Text>
             </View>
           </View>
+
+          <Text style = {{marginTop: 20, marginLeft: 20, fontSize: 15, fontFamily: 'sans-serif', color: '#fff'}}>
+              <Text style = {{fontWeight: 'bold'}}>Source: </Text>
+              Groot Industries, Inc.
+          </Text>
+          
           <View style = {styles.redirect}>
             <Button
               title="So what CAN I recycle?"
@@ -125,6 +131,7 @@ export default class Items extends React.Component {
               onPress={() => this.props.navigation.navigate('Recycle')}
             /> 
           </View>
+
           <View style = {{height: 50, width: 300}}/>
         </View>
       </ScrollView>

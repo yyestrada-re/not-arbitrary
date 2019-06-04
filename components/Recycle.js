@@ -3,8 +3,6 @@ import { StyleSheet, ImageBackground, Image, View, Text, Button } from 'react-na
 import { ScrollView } from 'react-native-gesture-handler';
 
 export default class Recycle extends React.Component {
-  static navigationOptions = {header: null} 
-
   render() {
     return(
       <ScrollView>
@@ -96,13 +94,18 @@ export default class Recycle extends React.Component {
                 {"\t"}recycle any motor oil!! {"\t\t\t"}
               </Text>
             </View>
+            <Text style = {{marginTop: 20, marginLeft: 20, fontSize: 15, fontFamily: 'sans-serif', color: '#fff'}}>
+              <Text style = {{fontWeight: 'bold'}}>Source: </Text>
+              Groot Industries, Inc.
+            </Text>
             <View style = {styles.backwards}>
                     <Button
                         title = "Go Back"
                         color= '#5990BF'
                         onPress={() => this.props.navigation.navigate('Items')}
                     />
-                </View>
+            </View>
+
             <View style = {{height: 50, width: 300}}/>
           </View>
         </View>

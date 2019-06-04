@@ -33,6 +33,11 @@ export default class Contaminated extends React.Component {
             ): null}
             <Text style={styles.statsText}>
               Why? One reason is the system that allows private haulers to label bins “contaminated” and send them to landfills, if improper materials are found. {"\n\n"}Under city rules, one plastic bag or food item improperly placed in a recycling bin could mean the whole bin is labeled “grossly contaminated.” 
+              (Ruppenthal)
+            </Text>
+            <Text style = {{marginTop: 20, marginLeft: 20, fontSize: 15, fontFamily: 'sans-serif', color: '#fff'}}>
+              <Text style = {{fontWeight: 'bold'}}>Source: </Text>
+              Better Government Association
             </Text>
             <View style = {styles.redirect}>
                 <Button

@@ -73,7 +73,14 @@ export default class Effects extends React.Component {
               <Text style = {styles.cont}>of energy are used when making products from raw materials. Recycling requires slighly less energy and therefore helps preserve natural resources. </Text>
 
             </View>
-            <View style = {{height: 50, width: 300}}/>
+            <View style = {{height: 50, width: 300}}>
+
+            <Text style = {{marginTop: 20, marginLeft: 20, fontSize: 15, fontFamily: 'sans-serif', color: '#fff'}}>
+              <Text style = {{fontWeight: 'bold'}}>Source: </Text>
+              “The Effects of Not Recycling."
+            </Text>
+
+            </View>
           </View>
         </View>
       </ScrollView>

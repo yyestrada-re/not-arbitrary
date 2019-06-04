@@ -3,6 +3,7 @@ import {TouchableOpacity, Image, Text, View, StyleSheet, Linking } from 'react-n
 import {Call} from 'react-native-phone-call';
 
 export default class Locations extends React.Component {
+
   makeCall = (number) => {
     const args = {
       number: number,
@@ -214,7 +215,7 @@ export default class Locations extends React.Component {
             <Text style = {styles.bolded}>Address: </Text>
             <Text onPress={() => {
               Linking.openURL('https://www.google.com/maps/place/Aargus+Recycling/@41.8161379,-87.743118,11.89z/data=!4m8!1m2!2m1!1srecycling+centers!3m4!1s0x0:0x3176f50bcb622474!8m2!3d41.8051658!4d-87.6780653');}}>       
-              4848 S Hoyne Ave, Chicago, IL 60609 {"\t\t\t\n"}
+              4848 S Hoyne Ave, Chicago, IL 60609 {"\t\t\t\n\n"}
             </Text>
             <Text style = {styles.bolded}>Phone Number: </Text>  
             <Text 

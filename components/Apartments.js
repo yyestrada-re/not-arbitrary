@@ -31,8 +31,13 @@ export default class Apartments extends React.Component {
                 <Text style = {styles.text}>
                     But because the law isn’t strictly enforced, 
                     <Text style={{fontWeight: 'bold', color: '#FF4545'}}> some landlords fail to provide adequate recycling services</Text> and tenants are forced to 
-                    be proactive to find out what recycling options are available to them or forgo recycling entirely.
+                    be proactive to find out what recycling options are available to them or forgo recycling entirely (Cromidas)
                 </Text>
+                <Text style = {{marginTop: 20, marginLeft: 20, fontSize: 15, fontFamily: 'sans-serif', color: '#fff'}}>
+                    <Text style = {{fontWeight: 'bold'}}>Source: </Text>
+                    RedEye Chicago
+              </Text>
+
                 <View style = {styles.backwards}>
                     <Button
                         title = "Go Back"

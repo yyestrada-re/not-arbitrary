@@ -22,7 +22,7 @@ export default class Statistics extends React.Component {
   render() {
     return(
       <View style = {styles.infographics}>
-        <View style={{width: 260, height:200, flex:1, flexDirection:'row', marginTop: 40}}>
+        <View style={{width: 260, height:200, flex:1, flexDirection:'row', marginTop: 5}}>
           <Image source = {require('../assets/recycle.png')} style = {{marginTop: 30, height: 200, width: 160}}/>
           {this.state.fontLoaded ? (
           <Text style={styles.statsText}>
@@ -37,6 +37,10 @@ export default class Statistics extends React.Component {
          {this.state.fontLoaded ? (
           <Text style = {{fontWeight: 'bold', marginTop: 20, color: '#FF4545', fontFamily: 'Space-Mono', fontSize: 20}}>So why is Chicago an exception?</Text>
          ): null}
+        </Text>
+        <Text style = {{marginTop: 20, marginLeft: 20, fontSize: 15, fontFamily: 'sans-serif', color: '#fff'}}>
+            <Text style = {{fontWeight: 'bold'}}>Source: </Text>
+            WTTW News
         </Text>
         <View style = {styles.redirect}>
           <Button
@@ -73,7 +77,7 @@ const styles = StyleSheet.create({
     fontFamily: 'sans-serif',
     marginLeft: 20,
     marginRight: 20,
-    marginTop: -10
+    marginTop: 10
   },
   redirect: {
     width: 90,
