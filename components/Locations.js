@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import {TouchableOpacity, Image, Text, View, StyleSheet, Linking } from 'react-native';
-import {Call} from 'react-native-phone-call';
+import call from 'react-native-phone-call';
 
 export default class Locations extends React.Component {
 
