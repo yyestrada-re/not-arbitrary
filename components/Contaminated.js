@@ -50,7 +50,7 @@ export default class Contaminated extends React.Component {
               <Button
                 title="Go Back"
                 color= '#5990BF'
-                onPress={() => this.props.navigation.navigate('Statistics')}
+                onPress={() => this.props.navigation.navigate('Stats')}
               />
             </View>
             <View style = {{height: 30, width: 400}}/>
