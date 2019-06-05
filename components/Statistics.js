@@ -78,7 +78,7 @@ const styles = StyleSheet.create({
   redirect: {
     width: 90,
     height: 30,
-    marginTop: 40,
+    marginTop: 20,
     marginLeft: 250
   },
   backwards: {

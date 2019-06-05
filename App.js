@@ -31,9 +31,6 @@ const RootStack = createStackNavigator({
   },
   Recycle: {
     screen: Recycle
-  },
-  Carpool: {
-    screen: Carpool
   }
 });
 

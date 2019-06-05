@@ -1,4 +1,4 @@
-import React from 'react';
+/*import React from 'react';
 import {View, Text,  StyleSheet, Image , PermissionsAndroid, Platform} from 'react-native';
 import AsyncStorage from 'react-native';
 
@@ -66,7 +66,7 @@ storeData = async (lat, long) => { //return a link instead
      try {
          const value = await AsyncStorage.getItem(key)
          if(value !== null) {
-            return(JSON.parse(url));
+            return(JSON.parse(key));
          }
      } catch(error) {
         console.warn(error)
@@ -79,11 +79,11 @@ storeData = async (lat, long) => { //return a link instead
           <Text style = {styles.boldText}>
              You are Here
           </Text>
-          <Text style={{justifyContent:'center',alignItems: 'center',marginTop:16}}>
+          <Text style={{justifyContent:'center',alignItems: 'center', marginTop:16}}>
             Longitude: {this.state.currentLongitude}
           </Text>
           <Text style={{justifyContent:'center',alignItems: 'center',marginTop:16}}>
-            Latitude: {this.state.currentLatitude}
+            Latitude: {this.state.currentLongitude}
           </Text>
        </View>
     )
@@ -102,4 +102,4 @@ const styles = StyleSheet.create ({
     fontSize: 30,
     color: 'red',
  }
-})
+})*/

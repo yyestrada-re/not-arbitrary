@@ -45,18 +45,6 @@ Items: {
       )
     }
  },
- Carpool: {
-  screen: Carpool,
-  navigationOptions: {
-    tabBarLabel: "Pick Up",
-    tabBarIcon: ({ tintColor }) => (
-      <Image
-        source={require("../assets/sports-car.png")}
-        style={{ width: 20, height: 20, tintColor: tintColor }}
-      />
-    )
-  }
-},
   About: {
     screen: Statistics,
     navigationOptions: {
