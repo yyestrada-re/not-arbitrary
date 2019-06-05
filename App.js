@@ -8,6 +8,7 @@ import Apartments from './components/Apartments'
 import Home from './components/Home';
 import NavBar from './components/NavBar';
 import Recycle from './components/Recycle'
+import Carpool from './components/Carpool';
 
 const RootStack = createStackNavigator({
   Default: {
@@ -30,6 +31,9 @@ const RootStack = createStackNavigator({
   },
   Recycle: {
     screen: Recycle
+  },
+  Carpool: {
+    screen: Carpool
   }
 });
 

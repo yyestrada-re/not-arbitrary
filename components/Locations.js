@@ -15,7 +15,7 @@ export default class Locations extends React.Component {
   render() {
     return (
       <View>
-        <TouchableOpacity style={styles.container}>
+        <View style={styles.container}>
         <View style = {styles.card}>
           <Image style = {styles.cardImage} source = {require('../assets/locationOne.jpg')}/>
           <Text style={styles.cardText}>
@@ -33,7 +33,7 @@ export default class Locations extends React.Component {
             </Text>
           </Text>  
         </View> 
-      </TouchableOpacity>
+      </View>
 
     <TouchableOpacity style={styles.container}>
         <View style = {styles.card}>

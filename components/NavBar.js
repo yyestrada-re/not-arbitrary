@@ -1,12 +1,12 @@
 import React from "react";
 import {Image, View, Icon, tab} from 'react-native';
 import {createBottomTabNavigator, createAppContainer} from 'react-navigation';
-import {Ionicons} from '../node_modules/@expo/vector-icons';
 
 import Home from './Home';
 import Effects from './Effects';
 import Items from './Items';
 import Statistics from "./Statistics";
+import Carpool from "./Carpool";
 
 const TabNavigator = createBottomTabNavigator ({
  Home: {
@@ -45,6 +45,18 @@ Items: {
       )
     }
  },
+ Carpool: {
+  screen: Carpool,
+  navigationOptions: {
+    tabBarLabel: "Pick Up",
+    tabBarIcon: ({ tintColor }) => (
+      <Image
+        source={require("../assets/sports-car.png")}
+        style={{ width: 20, height: 20, tintColor: tintColor }}
+      />
+    )
+  }
+},
   About: {
     screen: Statistics,
     navigationOptions: {
@@ -54,8 +66,9 @@ Items: {
           source={require("../assets/info.png")}
           style={{ width: 20, height: 20, tintColor: tintColor }}
         />
-    )
-  }}
+      )
+    }
+  } 
 });
 
 

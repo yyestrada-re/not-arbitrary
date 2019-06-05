@@ -8,6 +8,7 @@
   },
   "dependencies": {
     "@babel/core": "^7.4.5",
+    "@react-native-community/async-storage": "^1.4.2",
     "expo": "^32.0.0",
     "react": "16.5.0",
     "react-app-polyfill": "^1.0.1",
