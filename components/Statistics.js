@@ -45,8 +45,16 @@ export default class Statistics extends React.Component {
             onPress={() => this.props.navigation.navigate('Contaminate')}
           />
         </View>
-      </View>
-    </View>
+      <View style = {styles.backwards}>
+              <Button
+                title="Go Back"
+                color= '#5990BF'
+                onPress={() => this.props.navigation.navigate('NavBar')}
+              />
+            </View>
+            <View style = {{height: 30, width: 400}}/>
+        </View>
+        </View>
     );
   }
 }
